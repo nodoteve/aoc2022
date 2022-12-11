@@ -26,7 +26,7 @@ fn run_1(s: &str) -> u64 {
         .iter()
         .map(|line| line.chars().collect::<Vec<char>>())
         .collect();
-    let mut g: Vec<Vec<i16>> = h
+    let g: Vec<Vec<i16>> = h
         .iter()
         .map(|line| {
             line.iter()
@@ -36,7 +36,7 @@ fn run_1(s: &str) -> u64 {
         .collect();
     let mut visible: Vec<Vec<bool>> = g
         .iter()
-        .map(|line| line.iter().map(|i| false).collect())
+        .map(|line| line.iter().map(|_| false).collect())
         .collect();
 
     for x in 0..n {
@@ -87,7 +87,7 @@ fn run_2(s: &str) -> u64 {
         .iter()
         .map(|line| line.chars().collect::<Vec<char>>())
         .collect();
-    let mut g: Vec<Vec<i16>> = h
+    let g: Vec<Vec<i16>> = h
         .iter()
         .map(|line| {
             line.iter()
@@ -97,7 +97,7 @@ fn run_2(s: &str) -> u64 {
         .collect();
     let mut score: Vec<Vec<u64>> = g
         .iter()
-        .map(|line| line.iter().map(|i| 0).collect())
+        .map(|line| line.iter().map(|_| 0).collect())
         .collect();
 
     for x in 0..n {

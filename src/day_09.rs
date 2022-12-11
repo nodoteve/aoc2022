@@ -54,7 +54,7 @@ fn run_1(s: &str) -> i32 {
                 ph.1 -= 1;
                 t = "d";
             }
-            let touch: bool = (((ph.0 - pt.0) as i32).pow(2) + ((ph.1 - pt.1) as i32).pow(2) < 4);
+            let touch: bool = ((ph.0 - pt.0) as i32).pow(2) + ((ph.1 - pt.1) as i32).pow(2) < 4;
 
             if !touch {
                 if ph.0 != pt.0 && ph.1 != pt.1 {
@@ -116,10 +116,10 @@ fn run_2(s: &str) -> i32 {
             if dir.starts_with("D") {
                 p[0].1 -= 1;
             }
-            for k in (1..10) {
-                let touch: bool = (((p[k].0 - p[k - 1].0) as i32).pow(2)
+            for k in 1..10 {
+                let touch: bool = ((p[k].0 - p[k - 1].0) as i32).pow(2)
                     + ((p[k].1 - p[k - 1].1) as i32).pow(2)
-                    < 4);
+                    < 4;
 
                 if !touch {
                     if p[k - 1].0 != p[k].0 && p[k - 1].1 != p[k].1 {
